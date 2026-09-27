@@ -1,17 +1,33 @@
-# Business KPI Calculator
+# Business Metrics & KPI Engine
 
-> Reusable KPI engine for revenue, growth, margins, conversion, retention, productivity, and unit economics.
+> **Measurement problem:** Are business metrics defined consistently enough to support reliable decisions?
 
-## Business Problem
+A reusable KPI engine for revenue, growth, margins, conversion, retention, productivity, and unit economics.
 
-Teams frequently calculate similar metrics inconsistently. This project standardizes KPI definitions, inputs, edge cases, and interpretation so reported metrics are comparable and auditable.
+## Purpose
 
-## Analytical Questions
+Teams often calculate the same metric differently. This project standardizes KPI definitions, required inputs, denominators, edge cases, and interpretation.
 
-- What is the exact KPI definition?
-- Which inputs and denominators are required?
-- How should zero, null, or missing periods be handled?
-- Which KPI movements require investigation?
+## Workflow
+
+`Metric definition → Input validation → Calculation → Trend analysis → Diagnostic trigger → Interpretation`
+
+## Covered KPI families
+
+- Revenue
+- Growth
+- Gross margin
+- Conversion
+- Retention
+- Productivity
+- Unit economics
+
+## Analytical questions
+
+1. What is the exact metric definition?
+2. Which inputs and denominators are required?
+3. How should zero, null, and missing periods be handled?
+4. Which KPI movements should trigger investigation?
 
 ## Deliverables
 
@@ -21,48 +37,33 @@ Teams frequently calculate similar metrics inconsistently. This project standard
 - Example business dataset
 - KPI trend report
 - Interpretation guide
+- Tests for key calculations
 
-## Suggested Repository Structure
+## Reproduce
 
-```text
-business-kpi-calculator/
-├── data/
-├── notebooks/
-├── src/
-├── tests/
-├── outputs/
-├── README.md
-└── requirements.txt
+```bash
+python src/generate_outputs.py
 ```
 
-## Stack
+The generated outputs include a twelve-month illustrative KPI trend report and summary files.
 
-Python, pandas, SQL, Plotly, pytest
+## Data disclosure
 
-## Method
+The example dataset is synthetic and exists to demonstrate consistent metric definitions and interpretation.
 
-1. Define the decision context and metric definitions.
-2. Profile and validate the data.
-3. Build reproducible transformations and calculations.
-4. Quantify the main drivers, scenarios, or failure modes.
-5. Validate outputs and document limitations.
-6. Produce an executive-ready decision narrative.
+## Portfolio role
 
-## Portfolio Standard
+**Tier 2 — BI / Analytics Infrastructure**
 
-Use synthetic or public data with documented provenance. Clearly distinguish measured results from assumptions and illustrative scenarios.
+This repository is intentionally positioned as a reusable analytical component rather than a standalone business case study.
 
-## Sample Outputs
+## Related projects
 
-Run `python src/generate_outputs.py` to reproduce the twelve-month illustrative KPI trend report. The data is synthetic and exists to demonstrate consistent metric definitions.
+- [Data Quality & Analytics Assurance](https://github.com/oluwajuwonade/data-quality-audit-toolkit)
+- [AI-Powered Retail Sales Diagnostic](https://github.com/oluwajuwonade/AI-Powered-Retail-Sales-Diagnostic)
+- [Pricing & ROI Decision Engine](https://github.com/oluwajuwonade/pricing-roi-analytics-engine)
 
-### Executive summary
+## Author
 
-See [`outputs/executive_summary.md`](outputs/executive_summary.md) for the latest KPI readout and limitations.
-
-![Revenue and gross margin trend](outputs/revenue_margin_trend.png)
-
-![Funnel KPI trend](outputs/funnel_kpi_trend.png)
-
-- [`outputs/kpi_trend_report.csv`](outputs/kpi_trend_report.csv) — monthly KPI series
-- [`outputs/kpi_summary.csv`](outputs/kpi_summary.csv) — latest-period summary
+**Oluwajuwon Adediji**  
+Data & Quantitative Analyst | BI & Decision Analytics
