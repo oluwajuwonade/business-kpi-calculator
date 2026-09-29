@@ -51,6 +51,13 @@ The generated outputs include a twelve-month illustrative KPI trend report and s
 
 The example dataset is synthetic and exists to demonstrate consistent metric definitions and interpretation.
 
+## Important limitations
+
+- Example data is synthetic and used to demonstrate metric definitions and handling rules.
+- KPI calculations are only as reliable as the source data, business definitions, and denominators supplied.
+- The repository does not claim that one KPI definition is appropriate for every organisation or industry.
+- Production use should include stakeholder-agreed definitions, ownership, and reconciliation to source systems.
+
 ## Portfolio role
 
 **Tier 2 — BI / Analytics Infrastructure**
